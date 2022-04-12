@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new
-    @user = "user"
+    @user = User.new
   end
 
   def edit
@@ -12,6 +12,10 @@ class UsersController < ApplicationController
   end
 
   def update
+    
+  end
+
+  def index
     
   end
 end

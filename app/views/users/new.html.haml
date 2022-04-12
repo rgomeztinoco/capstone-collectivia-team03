@@ -1,1 +1,13 @@
-%h1 hello 2 
+
+=image_tag 'micolet-logo.svg'
+%h1 Almost new fashion with guarantee
+
+%h2 Welcome! Soon we will launch our site in
+%h2 in this country.
+%h2 Suscribe to receive our newsletter.
+
+=simple_form_for(@user) do |f|
+    =f.input :email
+    =f.association :topics, as: :check_boxes
+    =f.button :submit, label: "Subscribe me!"
+

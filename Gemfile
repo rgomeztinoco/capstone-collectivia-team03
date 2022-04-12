@@ -48,6 +48,9 @@ gem "sassc-rails"
 # Use Haml to process HTML
 gem "haml"
 
+# Use simple form to create form
+gem 'simple_form'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
