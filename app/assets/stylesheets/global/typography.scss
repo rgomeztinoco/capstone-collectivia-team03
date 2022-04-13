@@ -11,6 +11,15 @@ body {
   font-weight: 700;
 }
 
-.text-small {
-  font-size: 0.75rem;
+.text {
+  &--sm {
+    font-size: 0.75rem;
+  }
+  &--lg {
+    font-size: 1.25rem;
+  }
+}
+
+.center {
+  text-align: center;
 }

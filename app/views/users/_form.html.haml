@@ -1,14 +1,4 @@
-.flash_messages
-  - flash.each do |type, message|
-    - case type
-    - when "notice"
-      = content_tag :p, message, class: "notice flash"
-    - when "alert"
-      = content_tag :p, message, class: "error-300 flash"
-    - when "success"
-      = content_tag :p, message, class: "success flash"
-
 = simple_form_for(@user) do |f|
   = f.input :email, disabled: @user.persisted?, input_html: { placeholder: ' example@email.com' }
   = f.association :topics, as: :check_boxes, label: "Preferences", input_html: { class: 'input_select'}
-  = f.button :submit,"Subscribe me!"
+  = f.button :submit, @user.persisted? ? "Update" : "Subscribe me!"

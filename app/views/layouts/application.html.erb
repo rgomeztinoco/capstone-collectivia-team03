@@ -15,11 +15,22 @@
 
   <body>
     <div class="section">
-      <header class="title-micolet">
+      <header class="header">
         <%= image_tag("micolet-logo.svg") %>
-        <%= content_tag("p", t('.tag_line')) %>
+        <%= content_tag("p", t('.tag_line'), {class: "subtle center"}) %>
       </header>
-      <%= yield %>
+      <main class="main">
+        <div class="flash_messages">
+          <% flash.each do |type, message| %>
+            <% if type === "error" %>
+              <%= content_tag :p, message, class: "error" %>
+            <% else %>
+              <%= content_tag :p, message, class: "notice" %>
+            <% end %>
+          <% end %>
+        </div>
+        <%= yield %>
+      </main>
     </div>
   </body>
 </html>
