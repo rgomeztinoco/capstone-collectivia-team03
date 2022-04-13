@@ -12,6 +12,12 @@ class UsersController < ApplicationController
 
     if @user.validate
       response = email_verification_request(@user.email)
+
+      unless response[:autocorrect].empty?
+        @user.errors.add(:email, "did you mean #{response[:autocorrect]}")
+        return render :new, status: :unprocessable_entity
+      end
+
       if response[:quality_score].to_f >= 0.7
         @user.save
         render success_page
