@@ -1,0 +1,5 @@
+= render @user
+
+.user__actions
+  = link_to('Update preferences', edit_user_path(@user), {class: "btn"})
+  = button_to('Cancel Subscription', @user, method: :delete, class: "btn--outline")

@@ -1,0 +1,15 @@
+.user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  & ul {
+    padding-left: 1rem;
+  }
+  &__actions {
+    margin: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+}

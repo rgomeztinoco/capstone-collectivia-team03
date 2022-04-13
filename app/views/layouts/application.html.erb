@@ -8,9 +8,29 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="section">
+      <header class="header">
+        <%= image_tag("micolet-logo.svg") %>
+        <%= content_tag("p", t('.tag_line'), {class: "subtle center"}) %>
+      </header>
+      <main class="main">
+        <div class="flash_messages">
+          <% flash.each do |type, message| %>
+            <% if type === "error" %>
+              <%= content_tag :p, message, class: "error" %>
+            <% else %>
+              <%= content_tag :p, message, class: "notice" %>
+            <% end %>
+          <% end %>
+        </div>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

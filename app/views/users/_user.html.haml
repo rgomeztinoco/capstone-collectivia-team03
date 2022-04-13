@@ -1,0 +1,9 @@
+%article.user
+  %div
+    %p Email:
+    %p= user.email
+  %div 
+    %p Subscibed to:
+    %ul
+      - user.topics.each do |topic|
+        %li= topic.name
