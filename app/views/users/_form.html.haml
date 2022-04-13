@@ -1,0 +1,14 @@
+.flash_messages
+  - flash.each do |type, message|
+    - case type
+    - when "notice"
+      = content_tag :p, message, class: "notice flash"
+    - when "alert"
+      = content_tag :p, message, class: "error-300 flash"
+    - when "success"
+      = content_tag :p, message, class: "success flash"
+
+=simple_form_for @user, validate: true do |f|
+  =f.input :email
+  =f.association :topics, as: :check_boxes, label: "Preferences"
+  =f.button :submit, label: "Subscribe me!"

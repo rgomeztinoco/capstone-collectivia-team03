@@ -48,8 +48,11 @@ gem "sassc-rails"
 # Use Haml to process HTML
 gem "haml"
 
+# HTTP requests
+gem "httparty", "~> 0.18.1"
+
 # Use simple form to create form
-gem 'simple_form'
+gem "simple_form"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -57,6 +60,7 @@ gem 'simple_form'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem "dotenv-rails"
 end
 
 group :development do
@@ -65,6 +69,8 @@ group :development do
 
   gem "rubocop", require: false
   gem "rubocop-rails", require: false
+
+  gem "i18n-tasks", "~> 1.0.9"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
