@@ -30,4 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: ""
+  simple_form_for:
+    association:
+      topic_name: "hombre"
+      user_topic_ids_2: "mujer"
+      user_topic_ids_3: "nino"
