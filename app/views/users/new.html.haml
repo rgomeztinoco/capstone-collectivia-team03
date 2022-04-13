@@ -1,14 +1,6 @@
-.main
-	.title_micolet
-		=image_tag "micolet-logo.svg"
-		%p t('Almost new fashion with guarantee')
-	.title
-		%p Welcome! Soon we will launch our site
-		%p in this country.
-		%p.subs Suscribe to receive our newsletter.
-	
-	%form
-		=simple_form_for(@user) do |f|
-			=f.input :email, input_html: { title: 'Email Input', placeholder: ' example@email.com' }
-			=f.association :topics, as: :check_boxes, input_html: { class: 'input_select'}
-			=f.button :submit, 'Subscribe me!'
+%main 
+  .title
+    %p Welcome! Soon we will launch our site
+    %p in this country.
+    %p.subs Suscribe to receive our newsletter.
+= render "form"

@@ -8,7 +8,7 @@
     - when "success"
       = content_tag :p, message, class: "success flash"
 
-=simple_form_for @user, validate: true do |f|
-  =f.input :email
-  =f.association :topics, as: :check_boxes, label: "Preferences"
-  =f.button :submit, label: "Subscribe me!"
+= simple_form_for(@user) do |f|
+  = f.input :email, disabled: @user.persisted?, input_html: { placeholder: ' example@email.com' }
+  = f.association :topics, as: :check_boxes, label: "Preferences", input_html: { class: 'input_select'}
+  = f.button :submit,"Subscribe me!"

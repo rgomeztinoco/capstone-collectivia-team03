@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
       if response[:quality_score].to_f >= 0.7
         @user.save
-        render success_page
+        redirect_to @user, notice: "Your subscription was succesfully created"
       else
         @user.errors.add(:email, "this email doesn't seem to be real")
         render :new, status: :unprocessable_entity
@@ -37,13 +37,17 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      render success_page
+      redirect_to @user, notice: "Your subscription was succesfully updated"
     else
       render :edit, status: :unprocessable_entity
     end
   end
 
-  def destroy; end
+  # DELETE /users/1
+  def destroy
+    @user.destroy
+    redirect_to :root, notice: "Your suscription have been canceled"
+  end
 
   private
 

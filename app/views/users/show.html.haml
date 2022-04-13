@@ -1,0 +1,6 @@
+%p= notice
+
+= render @user
+
+= link_to('Update preferences', edit_user_path(@user))
+= button_to('Cancel Subscription', @user, method: :delete)
