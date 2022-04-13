@@ -1,13 +1,14 @@
-
-=image_tag 'micolet-logo.svg'
-%h1 Almost new fashion with guarantee
-
-%h2 Welcome! Soon we will launch our site in
-%h2 in this country.
-%h2 Suscribe to receive our newsletter.
-
-=simple_form_for(@user) do |f|
-    =f.input :email
-    =f.association :topics, as: :check_boxes
-    =f.button :submit, label: "Subscribe me!"
-
+%form
+	%header
+		=image_tag "micolet-logo.svg"
+		%p Almost new fashion with guarantee
+	.title
+		%p Welcome! Soon we will launch our site
+		%p in this country.
+		%p.subs Suscribe to receive our newsletter.
+	
+	.input_section
+		=simple_form_for(@user) do |f|
+			=f.input :email, input_html: { title: 'Email Input', placeholder: ' example@email.com' }
+			=f.association :topics, as: :check_boxes, input_html: { class: 'input_select'}
+			=f.button :submit, 'Subscribe me!', data: { disable_with: "<span class='subscribe'></span> Subscribe me!" }

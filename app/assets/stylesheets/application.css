@@ -13,3 +13,103 @@
  *= require_tree .
  *= require_self
  */
+
+ *{
+    padding: 0;
+    margin: 0;
+    text-align : center;
+ }
+ 
+form{
+    margin-top: 1.375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width:14.375rem;
+    height:4.125rem;
+    margin:0;
+    @media only screen and (max-width: 600px) {
+        width:calc(14.375rem*2);
+        height:cal(4.125rem*) width:14.375rem;
+        height:4.125rem;;
+      }
+}
+
+p{
+    font-size:0.875rem;
+    width:14.375rem;
+    height:0.875rem;
+}
+p.subs{
+    margin-top: 1.25rem;
+}
+
+.title{
+    margin-top: 3.75rem;
+    font-size:0.875rem;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    text-align-last: left;
+}
+.input.email{
+    row-gap: 0.5rem;
+}
+.string.email.required{
+    height: 2rem;
+    border-radius: 5px;
+    border:2px solid #aaaaaa;
+    text-align: left;
+    padding-left: 0.5rem;
+    outline:#30c584;
+ 
+}
+
+#user_email:hover{
+    border:2px solid #30c584;
+    text-align: left;
+    padding-left: 0.5rem;
+
+}
+
+.input_section{
+    margin-top: 1.875rem;
+}
+.input.check_boxes.optional.user_topics{
+    row-gap: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.checkbox>label{
+    padding-left: 0.625rem;
+    display: flex;
+    column-gap: 0.625rem;
+} 
+.check_boxes.optional.input_select{
+    accent-color: #30c584;  
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #30c584;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.1s;
+    cursor: pointer;
+    margin: 5px;
+  }
+   
+  .btn:hover {
+    background-color: #96d6ba;
+  }
+  
+
