@@ -1,9 +1,10 @@
 %article.user
   %div
-    %p Email:
+    %p #{t('.title_email_user')}
     %p= user.email
   %div 
-    %p Subscibed to:
+    %p #{t('.title_subscribe_to')}:
     %ul
       - user.topics.each do |topic|
         %li= topic.name
+        

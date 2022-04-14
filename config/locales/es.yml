@@ -1,0 +1,43 @@
+---
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: Correo registrado
+              blank: Falta correo
+  hello: Hello
+  layouts:
+    application:
+      tag_line: Moda casi nueva con garantia
+  title:
+    title_welcome: Welcome! Soon we will launch our site in this country.
+  users:
+    create:
+      did_you_mean: Querías decir
+      title_email_unreal: Este correo electrónico no parece ser real.
+      title_subscribe_correct: Su suscripción fue creada con éxito
+    destroy:
+      title_subscribe_cancel: Su suscripción ha sido cancelada
+    edit:
+      title_preferences: Title preferences
+    form:
+      name_topic: Preferencias
+      title_email: Correo
+      title_subscribe: Suscríbete Ahora
+      title_update: Actualizar
+      
+    new:
+      title_center_subscribe: Regístrese para recibir nuestro catalogo.
+      title_welcome: "¡Bienvenido! Próximamente lanzaremos nuestro sitio en este país."
+    show:
+      title_cancel_subscription: Cancelar suscripción
+      title_update_preferences: Actualizar preferencias
+    update:
+      title_subscribe_update: Su suscripción se actualizó con éxito
+    user:
+      title_email_user: 'Correo :'
+      title_subscribe_to: Suscrito a
+   
