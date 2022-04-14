@@ -10,5 +10,5 @@ class User < ApplicationRecord
               with: URI::MailTo::EMAIL_REGEXP,
               message: "invalid format"
             }
-  validates :topics, presence: { message: "you must select at least one" }
+  validates :topics, presence: { message: :select_you }
 end

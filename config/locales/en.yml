@@ -6,7 +6,12 @@ en:
         user:
           attributes:
             email:
-              blank: Missing email
+              taken: Registered Email
+              blank: Missing Email
+# es.activerecord.errors.models.user.attributes.topics.select_you
+        
+            topics:
+              select_you: "you must select at least one"
   hello: Hello
   layouts:
     application:
