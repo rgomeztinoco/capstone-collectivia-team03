@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params_new)
 
-    if @user.validate
+    if @user.valid?
       response = email_verification_request(@user.email)
 
       unless response[:autocorrect].empty?
@@ -20,9 +20,9 @@ class UsersController < ApplicationController
 
       if response[:quality_score].to_f >= 0.7
         @user.save
-        redirect_to @user, notice: "#{t('.title_subscribe_correct')}"
+        redirect_to @user, notice: t(".title_subscribe_correct")
       else
-        @user.errors.add(:email, "#{t('.title_email_unreal')}")
+        @user.errors.add(:email, t(".title_email_unreal"))
         render :new, status: :unprocessable_entity
       end
     else
@@ -36,8 +36,8 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
-    if @user.update(user_params)
-      redirect_to @user, notice: "#{t('.title_subscribe_update')}"
+    if @user.update(user_params_edit)
+      redirect_to @user, notice: t(".title_subscribe_update")
     else
       render :edit, status: :unprocessable_entity
     end
@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
-    redirect_to :root, notice: "#{t('.title_subscribe_cancel')}"
+    redirect_to :root, notice: t(".title_subscribe_cancel")
   end
 
   private
