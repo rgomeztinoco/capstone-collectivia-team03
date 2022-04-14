@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(user_params_new)
 
     if @user.validate
       response = email_verification_request(@user.email)
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
-    if @user.update(user_params)
+    if @user.update(user_params_edit)
       redirect_to @user, notice: "Your subscription was succesfully updated"
     else
       render :edit, status: :unprocessable_entity
@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
-    redirect_to :root, notice: "Your suscription have been canceled"
+    redirect_to :root, notice: "Your suscription has been canceled"
   end
 
   private
@@ -64,8 +64,12 @@ class UsersController < ApplicationController
   end
 
   # Only allow a list of trusted parameters through.
-  def user_params
+  def user_params_new
     params.require(:user).permit(:email, topic_ids: [])
+  end
+
+  def user_params_edit
+    params.require(:user).permit(topic_ids: [])
   end
 
   # Use callbacks to share common setup or constraints between actions.

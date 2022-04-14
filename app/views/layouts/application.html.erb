@@ -22,10 +22,10 @@
       <main class="main">
         <div class="flash_messages">
           <% flash.each do |type, message| %>
-            <% if type === "error" %>
-              <%= content_tag :p, message, class: "error" %>
+            <% if type === "alert" %>
+              <%= content_tag :p, message, class: "error center" %>
             <% else %>
-              <%= content_tag :p, message, class: "notice" %>
+              <%= content_tag :p, message, class: "notice center" %>
             <% end %>
           <% end %>
         </div>
