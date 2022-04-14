@@ -295,6 +295,7 @@ DEPENDENCIES
   httparty (~> 0.18.1)
   i18n-tasks (~> 1.0.9)
   importmap-rails
+  mail (~> 2.7)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
