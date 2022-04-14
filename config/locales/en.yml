@@ -6,27 +6,29 @@ en:
         user:
           attributes:
             email:
-              taken: Registered Email
-              blank: Missing Email
-# es.activerecord.errors.models.user.attributes.topics.select_you
-        
+              blank: can't be blank
+              taken: this email has already been taken
             topics:
-              select_you: "you must select at least one"
-  hello: Hello
+              select_you: you must select at least one
+  invalid_format: invalid format
   layouts:
     application:
       tag_line: Almost new fashion with guarantee
-  title:
-    title_welcome: Welcome! Soon we will launch our site in this country.
+  models:
+    topics:
+      names:
+        '1': Women's Fashion
+        '2': Men's Fashion
+        '3': Children's Fashion
   users:
     create:
       did_you_mean: Did you mean
-      title_email_unreal: This email doesn't seem to be real
-      title_subscribe_correct: Your subscription was succesfully created
+      subscribed_notice: Your subscription was succesfully created
+      title_email_false: This email doesn't seem to be real
     destroy:
-      title_subscribe_cancel: Your suscription have been canceled
+      canceled_notice: Your suscription have been canceled
     edit:
-      title_preferences: Title preferences
+      title_preferences: Update your preferences
     form:
       name_topic: Preferences
       title_email: Email
@@ -39,7 +41,7 @@ en:
       title_cancel_subscription: Cancel subscription
       title_update_preferences: Update preferences
     update:
-      title_subscribe_update: Your subscription was succesfully updated
+      updated_notice: Your subscription was succesfully updated
     user:
-      title_email_user: 'Email :'
-      title_subscribe_to: Subscribe to
+      title_email_user: Email
+      title_subscribed_to: Subscribed to
