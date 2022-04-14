@@ -8,7 +8,7 @@ class User < ApplicationRecord
             presence: true,
             format: {
               with: URI::MailTo::EMAIL_REGEXP,
-              message: "invalid format"
+              message: I18n.t("invalid_format")
             }
   validates :topics, presence: { message: :select_you }
 end

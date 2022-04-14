@@ -19,7 +19,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to user_url(User.last)
-    assert_equal "Your subscription was succesfully created", flash[:notice]
+    assert_equal I18n.t(".users.create.subscribed_notice"), flash[:notice]
   end
 
   test "should not create user with email that score less than 0.7 in the API" do
@@ -48,7 +48,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     patch user_url(@user), params: { user: { topic_ids: [1, 2] } }
     assert_redirected_to user_url(@user)
 
-    assert_equal "Your subscription was succesfully updated", flash[:notice]
+    assert_equal I18n.t(".users.update.updated_notice"), flash[:notice]
   end
 
   test "should not update user without topics" do
@@ -63,6 +63,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to "/"
-    assert_equal "Your suscription has been canceled", flash[:notice]
+    assert_equal I18n.t(".users.destroy.canceled_notice"), flash[:notice]
   end
 end
