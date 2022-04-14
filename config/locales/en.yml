@@ -1,14 +1,45 @@
 ---
 en:
-  hello: ""
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: Registered Email
+              blank: Missing Email
+# es.activerecord.errors.models.user.attributes.topics.select_you
+        
+            topics:
+              select_you: "you must select at least one"
+  hello: Hello
   layouts:
     application:
       tag_line: Almost new fashion with guarantee
-  simple_form_for:
-    association:
-      topic_name: hombre
-      user_topic_ids_2: mujer
-      user_topic_ids_3: nino
+  title:
+    title_welcome: Welcome! Soon we will launch our site in this country.
   users:
+    create:
+      did_you_mean: Did you mean
+      title_email_unreal: This email doesn't seem to be real
+      title_subscribe_correct: Your subscription was succesfully created
+    destroy:
+      title_subscribe_cancel: Your suscription have been canceled
+    edit:
+      title_preferences: Title preferences
+    form:
+      name_topic: Preferences
+      title_email: Email
+      title_subscribe: Subscribe me!
+      title_update: Update
     new:
-      tag_line: Almost new fashion with guarantee
+      title_center_subscribe: Suscribe to receive our newsletter.
+      title_welcome: Welcome! Soon we will launch our site in this country.
+    show:
+      title_cancel_subscription: Cancel subscription
+      title_update_preferences: Update preferences
+    update:
+      title_subscribe_update: Your subscription was succesfully updated
+    user:
+      title_email_user: 'Email :'
+      title_subscribe_to: Subscribe to
