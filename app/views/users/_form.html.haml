@@ -2,5 +2,3 @@
   = f.input :email, disabled: @user.persisted?, input_html: { placeholder: ' example@email.com' }, label: t('.title_email') 
   = f.association :topics, as: :check_boxes, input_html: { class: 'input_select'}, label: t('.name_topic') 
   = f.button :submit, @user.persisted? ? "#{t('.title_update')}": "#{t('.title_subscribe')}"
-  
-

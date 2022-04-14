@@ -8,6 +8,17 @@ es:
             email:
               taken: Correo registrado
               blank: Falta correo
+      # es.activerecord.errors.models.user.attributes.topics.select_you
+        
+            topics:
+              select_you: "Debes seleccionar al menos uno"
+              labels:
+                user_topic_ids_1: 
+                  create: "hola"
+  simple_form:
+    checkbox: 
+      user_topic_ids_1: "hola"
+
   hello: Hello
   layouts:
     application:
