@@ -22,6 +22,7 @@ class UsersController < ApplicationController
 
       if response[:quality_score].to_f >= 0.7
         @user.save
+        UserMailer.with(user: @user).welcome_email.deliver_later
         redirect_to @user, notice: t(".subscribed_notice")
       else
         @user.errors.add(:email, t(".title_email_false"))
