@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show; end
 
   def new
+    
     @user = User.new
   end
 
@@ -14,15 +15,15 @@ class UsersController < ApplicationController
       response = email_verification_request(@user.email)
 
       unless response[:autocorrect].empty?
-        @user.errors.add(:email, "did you mean #{response[:autocorrect]}")
+        @user.errors.add(:email, "#{t('.did_you_mean')} #{response[:autocorrect]}")
         return render :new, status: :unprocessable_entity
       end
 
       if response[:quality_score].to_f >= 0.7
         @user.save
-        redirect_to @user, notice: "Your subscription was succesfully created"
+        redirect_to @user, notice: "#{t('.title_subscribe_correct')}"
       else
-        @user.errors.add(:email, "this email doesn't seem to be real")
+        @user.errors.add(:email, "#{t('.title_email_unreal')}")
         render :new, status: :unprocessable_entity
       end
     else
@@ -37,7 +38,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: "Your subscription was succesfully updated"
+      redirect_to @user, notice: "#{t('.title_subscribe_update')}"
     else
       render :edit, status: :unprocessable_entity
     end
@@ -46,7 +47,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
-    redirect_to :root, notice: "Your suscription have been canceled"
+    redirect_to :root, notice: "#{t('.title_subscribe_cancel')}"
   end
 
   private
