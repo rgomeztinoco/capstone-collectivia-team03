@@ -10,12 +10,15 @@ es:
               taken: este correo ya ha sido registrado
             topics:
               select_you: debes seleccionar al menos uno
-  correo_cancel: Si quieres cancelar la suscripción presiona aquí
-  correo_follow: Para enviar un correo electrónico al sitio, simplemente siga este enlace
-  correo_successfully: Te has registrado correctamente en
-  correo_tanks: ¡Gracias por unirte y que tengas un gran día!
-  correo_username: Su nombre de usuario es
-  correo_welcom: Bienvenid@ a Micolet,
+  email:
+    cancel: Si deseas actualizar tus preferencias haz click aquí
+    follow: Para ver nuestros productos, sigue el siguiente enlace
+    successfully: Has sido registrado correctamente a nuestro boletin informativo
+    tanks: ¡Gracias por unirte y que tengas un gran día!
+    topics: Recibiras correos sobre
+    welcome: Bienvenid@ a Micolet,
+    profile: perfil
+    welcome_subject: Tu suscripcion fue registrada correctamente
   invalid_format: formato invalido
   layouts:
     application:
@@ -23,9 +26,9 @@ es:
   models:
     topics:
       names:
-        '1': Moda Femenina
-        '2': Moda Masculina
-        '3': Moda Infantil
+        "1": Moda Femenina
+        "2": Moda Masculina
+        "3": Moda Infantil
   users:
     create:
       did_you_mean: quisiste decir

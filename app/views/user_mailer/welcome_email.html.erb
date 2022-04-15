@@ -7,22 +7,26 @@
     <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
       <tr>
         <td align="center" style="padding:0;">
-          <main style="text-align-last: center; font-family: Verdana; font-size: 15+++px;" >
+          <main style="text-align-last: center; font-family: Verdana; font-size: 15px;" >
             <%= image_tag attachments['welcome.png'].url %>
-            <h1 ><%= t :correo_welcom %> <%= @user.email %></h1>
+            <h1><%= t("email.welcome") + " " + @user.email %></h1>
             <p>
-              <%= t :correo_successfully %> 爵 https://www.micolet.com,
-              <%= t :correo_username%>: <%= @user.email %>.<br>
+              <%= t("email.successfully") %>
             </p>
             <p>
-              <%= t :correo_follow%>: <%= @url %>.
+              <%= t("email.topics")%>: 
+              <%= @topics.join(", ") %>.<br>
             </p>
             <p>
-            <%= t :correo_tanks %>
+              <%= t("email.follow")%>: <%= @url %>.
             </p>
-
-
-            <p style="color: #30c584; font-family: Verdana;"><%= t :correo_cancel %> <%=link_to "﫧 Profile", user_url(@user) %> </p>
+            <p>
+              <%= t("email.tanks") %>
+            </p>
+            <p style="color: #30c584; font-family: Verdana;">
+              <%= t("email.cancel") %>
+              <%= link_to t("email.profile"), user_url(@user) %>
+            </p>
           </main>
         </td>
       </tr>
