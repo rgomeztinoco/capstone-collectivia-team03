@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+  
+    <main>
+      <%= image_tag attachments['welcome.png'].url %>
+      <h1>Welcome to Micolet, <%= @user.email %></h1>
+      <p>
+        You have successfully signed up to https://www.micolet.com,
+        your username is: <%= @user.email %>.<br>
+      </p>
+      <p>
+        To email to the site, just follow this link: <%= @url %>.
+      </p>
+      <p>Thanks for joining and have a great day!</p>
+    </main>
+  </body>
+</html>

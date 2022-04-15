@@ -1,0 +1,47 @@
+---
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: no puede quedar en blanco
+              taken: este correo ya ha sido registrado
+            topics:
+              select_you: debes seleccionar al menos uno
+  invalid_format: formato invalido
+  layouts:
+    application:
+      tag_line: Moda casi nueva con garantia
+  models:
+    topics:
+      names:
+        "1": Moda Femenina
+        "2": Moda Masculina
+        "3": Moda Infantil
+  users:
+    create:
+      did_you_mean: quisiste decir
+      subscribed_notice: Su suscripción fue creada con éxito
+      title_email_false: este correo electrónico no parece ser real
+    destroy:
+      canceled_notice: Su suscripción ha sido cancelada
+    edit:
+      title_preferences: Actualiza tus preferencias
+    form:
+      name_topic: Preferencias
+      title_email: Correo
+      title_subscribe: Suscríbete Ahora
+      title_update: Actualizar
+    new:
+      title_center_subscribe: Regístrese para recibir nuestro catalogo.
+      title_welcome: "¡Bienvenido! Próximamente lanzaremos nuestro sitio en este país."
+    show:
+      title_cancel_subscription: Cancelar suscripción
+      title_update_preferences: Actualizar preferencias
+    update:
+      updated_notice: Su suscripción se actualizó con éxito
+    user:
+      title_email_user: Correo
+      title_subscribed_to: Suscrito a

@@ -1,0 +1,33 @@
+.btn {
+  width: max-content;
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  background-color: var(--accent);
+  border: none;
+  color: var(--bg);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.1s;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+  &:active {
+    transform: translateY(0.2em);
+  }
+  &:disabled {
+    opacity: 0.75;
+  }
+  &--outline {
+    @extend .btn;
+    background-color: var(--bg);
+    color: var(--accent);
+    outline: 2px solid var(--accent);
+    &:hover {
+      background-color: var(--bg);
+      color: var(--accent-hover);
+      outline-color: var(--accent-hover);
+    }
+  }
+}

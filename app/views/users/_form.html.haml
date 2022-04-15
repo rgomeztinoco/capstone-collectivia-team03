@@ -1,0 +1,4 @@
+= simple_form_for(@user) do |f|
+  = f.input :email, disabled: @user.persisted?, input_html: { placeholder: 'example@email.com' }, label: t('.title_email') 
+  = f.association :topics, collection: @topics_with_i18n, as: :check_boxes, value_method: :first, label_method: :last, label: t('.name_topic')
+  = f.button :submit, @user.persisted? ? t('.title_update') : t('.title_subscribe')

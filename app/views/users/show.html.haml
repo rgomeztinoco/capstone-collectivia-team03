@@ -1,0 +1,5 @@
+= render @user
+
+.user__actions
+  = link_to(t('.title_update_preferences'), edit_user_path(@user), {class: "btn"})
+  = button_to(t('.title_cancel_subscription'), @user, method: :delete, class: "btn--outline")
