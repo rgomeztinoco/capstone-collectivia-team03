@@ -10,12 +10,15 @@ en:
               taken: this email has already been taken
             topics:
               select_you: you must select at least one
-  correo_cancel: If you want to cancel subscription click here
-  correo_follow: To email to the site, just follow this link
-  correo_successfully: You have successfully signed up to
-  correo_tanks: Thanks for joining and have a great day!
-  correo_username: your username is
-  correo_welcom: Welcome to Micolet,
+  email:
+    cancel: If you want to update your preferences click here
+    follow: To see our products follow the link
+    successfully: You have been successfully subscribed to our newsletter
+    tanks: Thanks for joining and have a great day!
+    topics: You'll get emails about
+    welcome: Welcome to Micolet,
+    profile: profile
+    welcome_subject: Your subscription has been successfully registered
   invalid_format: invalid format
   layouts:
     application:
@@ -23,9 +26,9 @@ en:
   models:
     topics:
       names:
-        '1': Women's Fashion
-        '2': Men's Fashion
-        '3': Children's Fashion
+        "1": Women's Fashion
+        "2": Men's Fashion
+        "3": Children's Fashion
   users:
     create:
       did_you_mean: Did you mean

@@ -1,5 +1,4 @@
 class UserMailer < ApplicationMailer
-
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -8,13 +7,11 @@ class UserMailer < ApplicationMailer
   def welcome_email
     # attachments.inline['image.jpg'] = File.read('/app/assets/images/welcome.jpg')
     @user = params[:user]
-    @url = 'https://www.micolet.com/'
+    @topics = @user.topics.map { |topic| t("models.topics.names.#{topic.id}") }
+    @url = "https://www.micolet.com/"
 
-    attachments.inline['welcome.png'] = File.read('app/assets/images/micolet-logo.png')
+    attachments.inline["welcome.png"] = File.read("app/assets/images/micolet-logo.png")
 
-    p "========================="
-    pp @user
-    p "========================="
-    mail(to: @user.email, subject: 'You are successfully registered')
+    mail(to: @user.email, subject: t("email.welcome_subject"))
   end
 end

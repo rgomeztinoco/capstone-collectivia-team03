@@ -1,12 +1,17 @@
 require "test_helper"
 
 class UserMailerTest < ActionMailer::TestCase
-  test "welcome_email" do
-    mail = UserMailer.welcome_email
-    assert_equal "Welcome email", mail.subject
-    assert_equal ["to@example.org"], mail.to
-    assert_equal ["from@example.com"], mail.from
-    assert_match "Hi", mail.body.encoded
-  end
+  test "can send welcome email" do
+    user = User.create(email: "valid@email.com", topic_ids: [1])
 
+    mail = UserMailer.with(user: user).welcome_email
+
+    assert_emails 1 do
+      mail.deliver_now
+    end
+
+    assert_equal I18n.t("email.welcome_subject"), mail.subject
+    assert_equal [user.email], mail.to
+    assert_equal [ENV["GMAIL_COLLECTIVIA"]], mail.fro
+  end
 end
