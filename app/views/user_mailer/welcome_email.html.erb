@@ -5,17 +5,22 @@
   </head>
   <body>
   
-    <main>
+    <main style="text-align-last: center; font-family: Verdana; font-size: 15+++px;" >
       <%= image_tag attachments['welcome.png'].url %>
-      <h1>Welcome to Micolet, <%= @user.email %></h1>
+      <h1 ><%= t :correo_welcom %> <%= @user.email %></h1>
       <p>
-        You have successfully signed up to https://www.micolet.com,
-        your username is: <%= @user.email %>.<br>
+        <%= t :correo_successfully %> 爵 https://www.micolet.com,
+        <%= t :correo_username%>: <%= @user.email %>.<br>
       </p>
       <p>
-        To email to the site, just follow this link: <%= @url %>.
+        <%= t :correo_follow%>: <%= @url %>.
       </p>
-      <p>Thanks for joining and have a great day!</p>
+      <p>
+      <%= t :correo_tanks %>
+      </p>
+
+
+      <p style="color: #30c584; font-family: Verdana;"><%= t :correo_cancel %> <%=link_to "﫧 Profile", user_url(@user) %> </p>
     </main>
   </body>
 </html>
