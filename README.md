@@ -15,13 +15,20 @@ To get the Rails server running locally:
 - `bundle install` to install all required dependencies
 - `rails db:create` to create postgresQL database we're using,
 - `rails db:migrate` to make all database migrations
-- `rails db:seed` to create the topics
-- Create a copy of .env.example a put your API key from https://www.abstractapi.com/email-verification-validation-api 
+- `rails db:seed` to create the topics (preferences)
+- Create a copy of .env.example and put your API key from https://www.abstractapi.com/email-verification-validation-api. In addition, GMAIL_COLLECTIVIA and GMAIL_PASSWORD are necessary. Then, rename the .env.example file to .env.
 - `rails s` to start the local server
+- `rails test` to run tests
 
 
 ## General info
-This project is about to persist the email of the users and his preferences in a postgreSQL database. An email is sended when the subscription is successfull. In addition, we could add more preferences options, this have to be add in seeds.rb file, the form will update automatically .
+This project is a service that provides the following functionalities:
+
+- We can stores user's email and their preferences.
+- When the user clicks the subscrite button, an confirmation email is sended.
+- Validations works in accord to the requirements.
+- We can add more preferences options, this have to be add in seeds.rb file.
+- Tests were implemented
 
 We based on database schema showing in the image below:
 
