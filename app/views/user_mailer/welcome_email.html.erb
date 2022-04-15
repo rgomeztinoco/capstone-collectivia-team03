@@ -3,19 +3,29 @@
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
-  <body>
-  
-    <main>
-      <%= image_tag attachments['welcome.png'].url %>
-      <h1>Welcome to Micolet, <%= @user.email %></h1>
-      <p>
-        You have successfully signed up to https://www.micolet.com,
-        your username is: <%= @user.email %>.<br>
-      </p>
-      <p>
-        To email to the site, just follow this link: <%= @url %>.
-      </p>
-      <p>Thanks for joining and have a great day!</p>
-    </main>
+  <body style="margin:0;padding:0;">
+    <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
+      <tr>
+        <td align="center" style="padding:0;">
+          <main style="text-align-last: center; font-family: Verdana; font-size: 15+++px;" >
+            <%= image_tag attachments['welcome.png'].url %>
+            <h1 ><%= t :correo_welcom %> <%= @user.email %></h1>
+            <p>
+              <%= t :correo_successfully %> 爵 https://www.micolet.com,
+              <%= t :correo_username%>: <%= @user.email %>.<br>
+            </p>
+            <p>
+              <%= t :correo_follow%>: <%= @url %>.
+            </p>
+            <p>
+            <%= t :correo_tanks %>
+            </p>
+
+
+            <p style="color: #30c584; font-family: Verdana;"><%= t :correo_cancel %> <%=link_to "﫧 Profile", user_url(@user) %> </p>
+          </main>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
