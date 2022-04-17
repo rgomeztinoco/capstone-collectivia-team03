@@ -50,6 +50,7 @@ gem "haml"
 
 # HTTP requests
 gem "httparty", "~> 0.18.1"
+gem "net-http"
 
 # Use simple form to create form
 gem "simple_form"
