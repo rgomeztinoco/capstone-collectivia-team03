@@ -12,6 +12,6 @@ class UserMailerTest < ActionMailer::TestCase
 
     assert_equal I18n.t("email.welcome_subject"), mail.subject
     assert_equal [user.email], mail.to
-    assert_equal [ENV["GMAIL_COLLECTIVIA"]], mail.fro
+    assert_equal [ENV["GMAIL_COLLECTIVIA"]], mail.from
   end
 end
