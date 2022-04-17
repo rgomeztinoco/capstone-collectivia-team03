@@ -148,6 +148,9 @@ GEM
     minitest (5.15.0)
     msgpack (1.5.1)
     multi_xml (0.6.0)
+    net-http (0.2.0)
+      net-protocol
+      uri
     net-imap (0.2.3)
       digest
       net-protocol
@@ -267,6 +270,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
+    uri (0.11.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -296,6 +300,7 @@ DEPENDENCIES
   i18n-tasks (~> 1.0.9)
   importmap-rails
   mail (~> 2.7)
+  net-http
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)

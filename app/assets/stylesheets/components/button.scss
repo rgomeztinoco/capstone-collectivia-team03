@@ -30,4 +30,8 @@
       outline-color: var(--accent-hover);
     }
   }
+  &--sm {
+    @extend .btn;
+    font-size: 1rem;
+  }
 }

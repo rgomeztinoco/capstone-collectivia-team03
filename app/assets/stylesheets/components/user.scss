@@ -1,4 +1,5 @@
 .user {
+  padding-inline: 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,8 +9,9 @@
     padding-left: 1rem;
   }
   &__actions {
-    margin: 1rem;
+    margin: 2rem;
     display: flex;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
   }
 }

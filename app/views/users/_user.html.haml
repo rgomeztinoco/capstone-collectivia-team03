@@ -1,9 +1,9 @@
 %article.user
   %div
-    %p #{t('.title_email_user')} :
+    %p.bold.text--lg #{t('.title_email_user')} :
     %p= user.email
   %div 
-    %p #{t('.title_subscribed_to')} :
+    %p.bold.text--lg #{t('.title_subscribed_to')} :
     %ul
       - user.topics.each do |topic|
         %li= t("models.topics.names.#{topic.id}")
